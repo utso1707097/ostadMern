@@ -1,0 +1,13 @@
+For new repository
+
+git init
+git add .
+git commit -m "message"
+git branch -m main
+git remote add origin https://github.com/utso1707097/ostadmern.git
+git push -u origin master
+
+For existing repository
+git add .
+git commit -m "message"
+git push
