@@ -11,3 +11,7 @@ For existing repository
 git add .
 git commit -m "message"
 git push
+
+For new setup
+set your username: git config --global user.name "name"
+set your email address: git config --global user.email "email"
