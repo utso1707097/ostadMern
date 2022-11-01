@@ -1,0 +1,4 @@
+strict mode ->police
+syntax:"use strict";
+
+spread operator -> ...
