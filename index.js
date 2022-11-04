@@ -76,3 +76,15 @@ myFunction();
 studentName = 'Rabbil Hasan';
 console.log(studentName);
 var studentName;
+
+//variable of javaScript
+//5 steps for declaration
+//var varName = value ;
+/*
+    cannot be reserved keyword
+    No space
+    no quotation
+    at first no number
+    Camelcase
+      
+*/
