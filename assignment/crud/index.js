@@ -1,5 +1,5 @@
 /*To see assignment is working uncomment the below
-comments one by one.
+comments one by one, run and comment again.
 */
 const {client} = require("./dbconfig");
 
@@ -14,7 +14,7 @@ const insertSingleDoc = async()=>{
             year : "4th",
         }
         const result = await students.insertOne(doc);
-        console.log('A document was inserted with the _id: ${result.insertedId}'); //problem 1:This line isn't outputs correctly 
+        console.log(`A document was inserted with the _id: ${result.insertedId}`); //problem 1:This line isn't outputs correctly 
     } catch (error) {
         console.log(error);
     }finally{
@@ -90,7 +90,7 @@ const findMultipleDoc = async()=>{
         //const result = await students.find(query);
         const cursor = students.find(query); //data will be in the form of chunk
 
-        if((await cursor.EstimatedDocumentCount) ===0 ){   //problem 2 :This if is not executing when there was no data in database
+        if((await students.estimatedDocumentCount()) ===0 ){   //problem 2 :This if is not executing when there was no data in database
             console.log("No document found!");
 
         }else{
@@ -117,7 +117,7 @@ const updateSingleDoc = async()=>{
             }
         };
         const result = await students.updateOne(filter,updateDoc,options);
-        console.log("updated successfully");
+        console.log(`${result.matchedCount} document(s) matched the filter, updated ${result.modifiedCount} document(S)`)
     } catch (error) {
         console.log(error);
     }finally{
@@ -184,4 +184,4 @@ const deleteMultipleDoc = async ()=>{
 //deleteSingleDoc();
 //findMultipleDoc();
 //deleteMultipleDoc();
-findMultipleDoc();
+//findMultipleDoc();
