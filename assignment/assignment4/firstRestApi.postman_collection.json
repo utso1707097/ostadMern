@@ -1,0 +1,104 @@
+{
+	"info": {
+		"_postman_id": "7bf2993f-d498-43c0-b99c-cf018e9f3e2e",
+		"name": "firstRestApi",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "24410895"
+	},
+	"item": [
+		{
+			"name": "postWithURLQuery",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/create-user?userName=Utso&age=23",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"create-user"
+					],
+					"query": [
+						{
+							"key": "userName",
+							"value": "Utso"
+						},
+						{
+							"key": "age",
+							"value": "23"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "postWithURLHeader",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "password",
+						"value": "12345678",
+						"type": "text"
+					},
+					{
+						"key": "retypePassword",
+						"value": "123456789",
+						"type": "text"
+					}
+				],
+				"url": "http://localhost:8000/password"
+			},
+			"response": []
+		},
+		{
+			"name": "postWithURLBody",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\":\"utso\",\r\n    \"Profession\":\"MERN Stack Developer\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8000/about"
+			},
+			"response": []
+		},
+		{
+			"name": "uploadFileUsingMulter",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "myfile",
+							"type": "file",
+							"src": "/C:/Users/utsom/OneDrive/Desktop/utso.jpg"
+						}
+					]
+				},
+				"url": "http://localhost:8000/upload-picture"
+			},
+			"response": []
+		},
+		{
+			"name": "downloadPicture",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		}
+	]
+}
